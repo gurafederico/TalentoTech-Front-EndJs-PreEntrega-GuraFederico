@@ -1,0 +1,280 @@
+/* Reset de css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* Para que 1 rem = 10px */
+  font-size: 62.5%;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  /* color para el fondo de la pagina */
+  background-color: #d5d5d5;
+  /* color para el texto principal del body */
+  color: #013369;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+}
+
+.header {
+  /* color para el fondo del header */
+  background-color: #013369;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo {
+  padding: 0.8rem;
+  margin-left: 1.5rem;
+
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.header__logo a {
+  /* color para el enlace del logo */
+  color: #fb4f14;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__logo a:hover {
+  /* color para el enlace del logo al pasar el mouse */
+  color: #cc3f10;
+}
+
+.header__nav {
+  padding: 0.8rem;
+  margin-right: 1.5rem;
+}
+
+.header__nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.header__nav li {
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+.header__nav a {
+  /* color para los enlaces de navegacion */
+  color: #fb4f14;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.header__nav a:hover {
+  /* color para los enlaces de navegacion al pasar el mouse */
+  color: #cc3f10;
+}
+
+.footer {
+  /* color para el fondo del footer */
+  background-color: #013369;
+
+  padding: 1.5rem;
+  /* color para el texto del footer */
+  color: #d5d5d5;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer nav ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    home                                    */
+/* -------------------------------------------------------------------------- */
+
+main {
+  width: 90%;
+
+  flex: 1;
+
+  margin: 1.5rem auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main h1 {
+  font-size: 3.2rem;
+  margin: 1.5rem 0;
+}
+
+main .parrafo-home {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  width: 80%;
+}
+
+.productos-home {
+  width: 100%;
+}
+
+.productos-home h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  margin: 2rem;
+}
+
+.contenedor-tarjetas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.tarjeta-producto {
+  /* color para el fondo de las tarjetas */
+  background-color: #013369;
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  width: 25rem;
+  /* color para el texto de la tarjeta */
+  color: #d5d5d5;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+.tarjeta-producto h3 {
+  font-size: 2rem;
+}
+
+.tarjeta-producto p {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  contacto                                  */
+/* -------------------------------------------------------------------------- */
+
+.seccion-contacto {
+  width: 100%;
+
+  margin: 1.5rem auto;
+}
+
+.titulo-contacto {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+.form {
+  /* color para el fondo del formulario */
+  background-color: #013369;
+  padding: 3.5rem;
+  border-radius: 0.8rem;
+
+  width: 50rem;
+
+  margin: auto;
+  /* color para el texto del formulario */
+  color: #d5d5d5;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.campo-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.campo-form label {
+  font-size: 1.6rem;
+}
+.campo-form input,
+.campo-form textarea {
+  /* color del texto dentro de los campos */
+  color: #013369;
+  padding: 0.8rem;
+  font-size: 1.6rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form button {
+  /* color para el fondo del boton */
+  background-color: #fb4f14;
+  /* color para el texto del boton */
+  color: #d5d5d5;
+  border: none;
+  padding: 0.8rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form button:hover {
+  /* color para el fondo del boton al pasar el mouse */
+  background-color: #cc3f10;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                media queries                               */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__logo,
+  .header__nav {
+    margin: 0;
+  }
+
+  .contenedor-tarjetas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-producto {
+    width: 80%;
+  }
+  .form {
+    width: 80%;
+    min-width: 400px;
+  }
+}
